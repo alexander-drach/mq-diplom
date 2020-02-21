@@ -1,0 +1,747 @@
+@font-face { 
+    font-family: "open- sans";
+    src: url(../fonts/OpenSans-Regular.ttf) format("truetype"), 
+         url(../fonts/OpenSans-Regular.woff) format("woff"),
+         url(../fonts/OpenSans-Regular.woff2) format("woff2"); 
+}
+
+@font-face { 
+    font-family: "open-sans-bold";
+    src: url(../fonts/OpenSans-Bold.ttf) format("truetype"), 
+         url(../fonts/OpenSans-Bold.woff) format("woff"),
+         url(../fonts/OpenSans-Bold.woff2) format("woff2"); 
+}
+
+body{
+    margin: 0;
+    font-family: "open- sans", sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: "open-sans-bold";
+}
+
+.visually-hidden {
+    width: 1px;
+    height: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+    max-width: 1560px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* header */
+
+.header-page {
+    position: relative;
+    background-image: url(../images/football_1920.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 45px 0 110px 0;
+    color: #ffffff;
+}
+
+.header-page:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    display: block;
+    background-color: rgba(10, 14, 52, 0.9);
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.logo {
+    display: block;
+    width: 200px;
+    fill: #ffffff;
+    margin-bottom: 300px;
+}
+
+.main-title {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 0;
+    margin-bottom:220px;
+    font-size: 90px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.main-title span {
+    font-weight: bold;
+    align-self: flex-end;
+}
+
+.control {
+    display: flex;
+}
+
+.btn-download {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 75px;
+    background-color: #5e42b0;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: left;
+    text-decoration: none;
+    border: none;
+    border-radius: 40px;
+}
+
+.btn-download:first-child {
+    margin-right: 30px;
+}
+
+.btn-icon {
+    width: 40px;
+    margin-right: 25px;
+    fill: #ffffff;
+}
+
+.btn-title {
+    display: block;
+    font-weight: bold;
+}
+
+/* header end */
+
+/* общие стили секций начало */
+
+.section-title {
+    margin: 0 0 100px 0;
+    font-size: 80px;
+    text-transform: uppercase;
+    color: #e7e7e7;
+}
+
+.list {
+    margin: 0;
+    padding-left: 0;
+    list-style-type: none;
+    counter-reset: section;
+}
+
+.list-item-desc {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+/* общие стили секций конец */
+
+/* секции футболист / баскетболист начало */
+
+.section {
+    padding-top: 110px;
+    position: relative;
+}
+
+.list-item-title::before {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    counter-increment: section;
+    content: "0" counter(section);
+}
+
+.list-item-title {
+    position: relative;
+    margin: 0 0 35px 0;
+    padding-left: 30px;
+    font-size: 36px;
+    text-transform: uppercase;
+    color: #c1c1c1;
+}
+
+.list-item {
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.list-item:first-child {
+    padding-top: 0;
+}
+
+.section-thumb-wrapper {
+    position: absolute;
+    z-index: 20;
+}
+
+.athlets .section-thumb-wrapper {
+    top: 50px;
+    left: 5%;
+}
+
+.players .section-thumb-wrapper {
+    right: 0;
+    top: 60px;
+}
+
+.list-item-title:after {
+    position: absolute;
+    left: 0;
+    top: 30px;
+    content: "";
+    display: block;
+    width: 20px;
+    height: 5px;
+    border-radius: 4px;
+    background-color: #5e42b0;
+}
+
+.athlets .container {
+    padding-left: 50%;
+}
+
+.athlets .list-item:nth-child(2) {
+    background-color: #f6f4fa;
+}
+
+.athlets .list-item:last-child {
+    background-color: #5e42b0;
+}
+
+.players .container {
+    padding-right: 50%;
+}
+
+.players .list-item:nth-child(2) {
+    background-color: #f5f6f7;
+}
+
+.players .list-item:last-child {
+    background-color: #0a0e34;
+}
+
+.list-item:last-child .list-item-desc{
+    color: #ffffff;
+}
+
+.list-item:last-child .list-item-title:after{
+    background-color: #ffffff;
+}
+
+.players .list-item:last-child .list-item-title::before {
+    color: #9173e6;
+}
+
+/* секции футболист / баскетболист конец */
+
+/* секции с картинками начало */
+
+.section-list {
+    counter-reset: section;
+}
+/*
+.section-list .section-content {
+    display: flex;
+}
+*/
+.section-list .section-desc {
+    width: 50%;
+}
+
+.section-list-item {
+    display: flex;
+    align-items: center;
+}
+
+.section-list-item-count {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;  
+    left: calc(100% - 75px);
+    bottom: 50%;
+    transform: translateY(50%);  
+    height: 150px;
+    width: 150px;
+    background-color: #5e42b0;
+    z-index: 50;
+}
+
+.section-list-item:nth-child(even) .section-list-item-count {
+    left: -75px;
+}
+
+.section-list-item-count::before {
+    display: block;
+    counter-increment: section;
+    content: "0" counter(section);
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.section-list-item-count::after {
+    display: block;
+    content: "";
+    width: 25px;
+    height: 5px;
+    border-radius: 4px;
+    background-color: #8f7bc8;
+}
+
+.section-list .section-thumb {
+    position: relative;
+    width: 50%;    
+}
+
+.section-list .list-item-desc {
+    max-width: 600px;
+    font-size: 24px;
+}
+
+.section-list-item:nth-child(odd) .section-desc {
+    padding-left: 130px;
+}
+
+.section-list-item:nth-child(even) .section-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 130px;
+}
+
+/* секции с картинками конец */
+
+    /* footer */
+
+.footer-page {
+    position: relative;
+    padding: 230px 0 50px 0;
+    color: #ffffff;
+    background-image: url(../images/game_1920.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.footer-page:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    display: block;
+    background-color: rgba(10, 14, 52, 0.9);
+}
+
+.footer-logo {
+    margin-bottom: 0;
+}
+
+.footer-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+}
+
+.footer-title-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 150px;
+    max-width: 850px;
+}
+
+.footer-title-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 130px;
+    background-color: #5e42b0;
+    border-radius: 25px;
+    margin-right: 35px;
+}
+
+.footer-title-icon svg {
+    width: 80%;
+    fill: #ffffff;
+}
+
+.footer-title {
+    flex: 1;
+    font-size: 75px;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.footer-title span {
+    display: block;
+    font-size: 30px;
+    font-weight: normal;
+    color: #a496ca;
+}
+
+.footer-page .control {
+    margin-bottom: 260px;
+}
+
+/* footer end */
+
+@media (max-width: 1200px) {
+
+    .main-title {
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+    }
+
+    .main-title span {
+        margin-left: 10%;
+    }
+
+    .section-title {
+        margin-bottom: 30px;
+    }
+
+    .section-list-item:nth-child(odd) .section-desc {
+        padding-left: 75px;
+        padding-right: 30px;
+    }
+    
+    .section-list-item:nth-child(even) .section-desc {
+        padding-right: 75px;
+        padding-left: 30px;
+    }
+
+    .section-list-item:before {
+        height: 115px;
+        width: 115px;
+    }
+
+    .athlets .section-thumb-wrapper {
+        top: 50px;
+        left: -130px;
+    }
+} /* 1200px end */
+
+@media (max-width: 960px) {
+/* header - 960px */
+
+    .container {
+        padding: 0;
+    }
+
+    .header-page {
+        padding-bottom: 90px;
+    }
+
+    .logo {
+        margin-bottom: 170px;
+    }
+
+    .main-title {
+        font-weight: bold;
+        font-size: 64px;
+        margin-bottom: 300px;        
+    }    
+
+/* header - 960px end */
+
+/* секция футболист/баскетболист - 960px начало */
+
+    .athlets .container {
+        padding-right: 30px;
+    }
+
+    .players .container {
+        padding-left: 30px;
+    }
+
+/* секция футболист/баскетболист - 960px конец */
+
+/* секция с квадратными цифрами начало - 960px */
+
+    .section-list-item {
+        flex-direction: column;
+    }
+
+    .section-list-item .section-thumb {
+        width: 100%;
+        order: -1;
+    }
+
+    .section-list-item .section-desc {
+        padding-top: 80px;
+        padding-bottom: 110px;
+    }
+
+    .section-list-item:nth-child(odd) .section-desc {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+    .section-list-item:nth-child(even) .section-desc {
+        display: block;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .section-list .section-desc {
+        width: 100%;
+    }
+
+    .section-list .section-desc p {
+        margin: 0;
+    }
+
+    .section-list-item-count {
+        left: 35px;
+        bottom:30px;
+    }
+
+    .section-list-item:nth-child(even) .section-list-item-count {
+        left: 30px;
+    }
+
+/* секция с квадратными цифрами конец - 960px */
+
+/* footer - 960px */
+
+    .footer-page {
+        padding-top: 120px;
+        padding-bottom: 20px;
+    }
+
+    .footer-logo {
+        margin-bottom: 0;
+    }
+
+    .footer-title-wrapper {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 280px;
+    }
+
+    .footer-title-icon {
+        margin-right: 0;
+        margin-bottom: 80px;
+    }
+
+    .footer-title span {
+        font-size: 36px;
+    }
+
+    .footer-page .control {
+        margin-bottom: 50px;
+    }
+} /* 960px end */
+
+@media (max-width: 640px) {
+
+/* header - 640px */
+
+    .header-page {
+        padding-top: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 80px;
+    }
+
+    .logo {
+        width: 130px;
+        margin-bottom: 140px;
+    }
+
+    .main-title {
+        width: 100%;
+        font-size: 28px;
+        margin-bottom: 90px;
+    }
+
+    .main-title span {
+        margin-top: 30px;
+    }
+
+    .control {
+        width: 50%;
+        flex-direction: column;
+    }
+
+    .btn-download {
+        width: 100%;
+        height: 35px;
+        font-size: 8px;
+    }
+
+    .btn-icon {
+        width: 20px;
+        margin-right: 10px;
+    }
+
+    .btn-download:first-child {
+        margin-right: 0;
+        margin-bottom: 12px;
+    }
+
+    .btn-download:first-child .btn-icon {
+        margin-left: 20px;
+    }
+
+/* header - 640px end */
+
+    .section-title {
+        font-size: 50px;
+    }    
+
+/* секция футболист/баскетболист - 640px начало */
+
+    .section {
+        padding-top: 25px;
+    }
+
+    .athlets .container {
+        padding: 0 20px;
+    }
+
+    .athlets .section-title,
+    .players .section-title {
+        margin-bottom: 20px;
+    }
+
+    .athlets .section-thumb-wrapper,
+    .players .section-thumb-wrapper {
+        position: relative;
+        left: 0;
+        top: 0;
+        margin-bottom: 50px;
+        width: 100%;
+    }
+
+    .players .container {
+        padding: 0 20px;
+    }
+
+    .list-item-title {
+        font-size: 23px;
+        margin-bottom: 25px;
+    }
+
+    .list-item-title::before {
+        top: 2px;
+    }
+
+    .list-item-title:after {
+        top: 25px;
+    }
+
+
+/* секция футболист/баскетболист - 640px конец */
+
+/* секция с квадратными цифрами - 640px начало */
+
+    .section-list-item .section-desc {
+        padding-top: 35px;
+        padding-bottom: 80px;
+        font-size: 16px;
+    }
+
+    .section-list-item .section-title {
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+
+    .section-list-item:nth-child(odd) .section-desc {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .section-list-item:nth-child(even) .section-desc {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .section-list .section-desc {
+        width: 100%;
+    }
+
+    .section-list-item-count {
+        width: 75px;
+        height: 75px;
+        left: 20px;
+        bottom: 10px;
+    }
+
+    .section-list-item-count::before {
+        font-size: 14px;
+    }
+
+    .section-list-item:nth-child(even) .section-list-item-count {
+        left: 20px;
+    }
+
+/* секция с квадратными цифрами - 640px конец */
+
+/* footer - 640px начало */
+
+    .footer-content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .footer-title-wrapper {
+        margin-bottom: 70px;
+    }
+
+    .footer-title {
+        font-size: 32px;
+    }
+
+    .footer-title-icon {
+        width: 75px;
+        height: 75px;
+        border-radius: 10px;
+    }
+
+    .footer-title span {
+        font-size: 14px;
+    }
+/* footer - 640px конец */
+}/* 640px end */
+
+@media (max-width: 375px) {
+    .control {
+        width: 100%;
+    }
+}
